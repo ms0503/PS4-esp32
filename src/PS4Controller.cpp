@@ -10,6 +10,7 @@ extern "C" {
 #define ESP_BD_ADDR_HEX_PTR(addr) \
   (uint8_t*)addr + 0, (uint8_t*)addr + 1, (uint8_t*)addr + 2, \
   (uint8_t*)addr + 3, (uint8_t*)addr + 4, (uint8_t*)addr + 5
+#define ESP_BD_ADDR_HEX_STR "%hhx:%hhx:%hhx:%hhx:%hhx:%hhx"
 
 PS4Controller::PS4Controller() {}
 
@@ -44,7 +45,7 @@ bool PS4Controller::begin() {
 bool PS4Controller::begin(const char* mac) {
   esp_bd_addr_t addr;
     
-  if (sscanf(mac, ESP_BD_ADDR_STR, ESP_BD_ADDR_HEX_PTR(addr)) != ESP_BD_ADDR_LEN) {
+  if (sscanf(mac, ESP_BD_ADDR_HEX_STR, ESP_BD_ADDR_HEX_PTR(addr)) != ESP_BD_ADDR_LEN) {
     log_e("Could not convert %s\n to a MAC address", mac);
     return false;
   }
