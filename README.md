@@ -1,3 +1,9 @@
+# Original repository
+ https://github.com/aed3/PS4-esp32
+# Add examples
+1. GetBluetoothMacAddress : get the MAC address of the ESP32
+2. bt_remove_paired_devices : If you have connected more than one Dual Shock4 and ESP32, and cannot connect them again, try unpairing them.
+-------------------------------------------------------------------------------------------------------------------------
 # PS4-esp32
 Use a PS4 controller with an ESP32
 
