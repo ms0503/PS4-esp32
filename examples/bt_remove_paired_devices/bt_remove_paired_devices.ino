@@ -15,7 +15,7 @@
 #include"esp_gap_bt_api.h"
 #include "esp_err.h"
 
-#define REMOVE_BONDED_DEVICES 0   // <- Set to 0 to view all bonded devices addresses, set to 1 to remove
+#define REMOVE_BONDED_DEVICES 1   // <- Set to 0 to view all bonded devices addresses, set to 1 to remove
 
 #define PAIR_MAX_DEVICES 20
 uint8_t pairedDeviceBtAddr[PAIR_MAX_DEVICES][6];
